@@ -49,7 +49,10 @@ body{
   
   
 }
-
+.imgpfp{
+  border-radius: 100px;
+  height: 500px;
+}
 .intro {
   
   display: flex; /* Use flexbox layout */
@@ -96,7 +99,8 @@ body{
   width: 50vh;
   border-radius: 20px;
   background-color: rgba(222, 213, 213, 0.411); /* White with 50% opacity */
-  
+  overflow: hidden; /* This will hide the overflow content */
+
 }
 
 
@@ -111,8 +115,10 @@ body{
 .introinfo p{
   margin: 0; /* Remove default margin of h1 to tighten the spacing */
   color: azure;
-  font-size: 29px;
-
+  font-size: 20px;
+  white-space: normal; /* Ensures text wraps and doesn't overflow */
+  overflow-wrap: break-word; /* Break words that are too long to fit */
+  text-align: justify; /* Optional: This will justify your text */
 
 }
 
@@ -201,7 +207,7 @@ body{
   display: flex;
   align-content: center;
   object-fit: contain;
-  background-color: #565658;
+  background-color: #4f4f52;
 
 }
 
@@ -243,7 +249,7 @@ button {
   font-size: 27px;
   padding: 1em 2.7em ;
   font-weight: 700;
-  background: #474748;
+  background: #333e3e;
   color: white;
   border: none;
   position: relative;
@@ -303,4 +309,22 @@ button:active {
   justify-content: space-around; /* Distributes space around the items */
   align-items: center; /* Aligns items vertically in the center */
   margin-top: auto;
+  padding-top: 100px;
+
+}
+
+.fourthlayer{
+  display: flex; /* Enables Flexbox for this container */
+  justify-content: space-around; /* Distributes space around the items */
+  align-items: center; /* Aligns items vertically in the center */
+  margin-top: auto;
+  padding-top: 100px;
+  flex-direction: row;
+
+
+}
+.fourthlayer .container {
+  display: flex;
+  justify-content: space-around; /* This will space your cards evenly */
+  flex-wrap: wrap; /* This will allow cards to wrap onto the next line on smaller screens */
 }
