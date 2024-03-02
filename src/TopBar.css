@@ -1,0 +1,37 @@
+/* Style for the navbar container */
+.navbar {
+  background-color: #343a40; /* Dark background */
+  color: #ffffff; /* Light text */
+  padding: 0.5rem 1rem; /* Padding around the content */
+}
+
+/* Navbar brand styling */
+.navbar-brand {
+  color: #d4cece;
+  font-weight: bold;
+  font-size: 1.5rem; /* Larger text for the brand */
+}
+
+/* General link styling */
+.nav-link {
+  color: #9fa9b3; /* Slightly lighter text for links */
+  margin-right: 1rem; /* Space between links */
+  transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for links */
+.nav-link:hover {
+  color: #ffffff; /* Change color on hover */
+}
+
+/* Adjustments for mobile screens */
+@media (max-width: 992px) {
+  .navbar-collapse {
+      margin-top: 1rem; /* Add space above the collapsed menu */
+  }
+
+  .nav-link {
+      display: block; /* Stack the links vertically */
+      margin: 0.5rem 0; /* Add vertical space between links */
+  }
+}
