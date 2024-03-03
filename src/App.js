@@ -15,6 +15,10 @@ import openai from './openai.jpg';
 import './4thlayer.css';
 import vision from './vision.jpg'
 import meta from './meta.webp';
+import './titles.css';
+import './footer.css';
+import linkden from './linkden.png';
+import x from './X.jpg'
 function App() {
   return (
     <div className="App">
@@ -51,10 +55,10 @@ function App() {
 </div>
 </div>
 <hr className="borders" />
+
+
 <button>
-  <span class="transition"></span>
-  <span class="gradient"></span>
-  <span class="label">My Skills</span>
+  My Skills
 </button>
 
 <div className="secondlayer">
@@ -261,29 +265,70 @@ Max Focus AI allows you to prioritize tasks giving you a detailed schedule and t
 
 <hr className="borders" />
 
-<button>
-  <span class="transition"></span>
-  <span class="gradient"></span>
-  <span class="label">Connect</span>
-</button>
 
 
 
-<div className="fifthlayer">
 
-
-
-</div>
 
 
 
 
 <footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Get in touch</h4>
+      <a href="mailto:tristanhancock@gmail.com">tristanhancock@gmail.com</a>
+    </div>
 
 
 
+<div class="footer-section">
+  <h4>Connect</h4>
+  <a href="https://www.linkedin.com/in/tristan-hancock-b54570223/" target="_blank" rel="noopener noreferrer">
+    <img src={linkden} alt="LinkedIn" class="social-logo"/>
+    LinkedIn
+  </a>
+  <a href="https://twitter.com/TristanInTech" target="_blank" rel="noopener noreferrer">
+    <img src={x} alt="Twitter" class="social-logo"/>
+    Twitter
+  </a>
+  <a href="https://github.com/Tristan-Hancock" target="_blank" rel="noopener noreferrer">
+    <img src={git} alt="GitHub" class="social-logo"/>
+    GitHub
+  </a>
+</div>
 
+
+
+    <div class="footer-section">
+      <h4></h4>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <div class="footer-section">
+      <h4>Ventures</h4>
+      <p>MaxFocusAI</p>
+      <p>MaxFitnessAI</p>
+      <p></p>
+    </div>
+  </div>
+  <div class="footer-meta">
+    <p>Built By</p>
+    <p>Tristan Josiah Hancock</p>
+  </div>
+  <div class="footer-nav">
+ 
+  </div>
 </footer>
+
+
+
+
+
+
+
+
     </div>
   );
 }

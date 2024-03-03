@@ -1,4 +1,11 @@
 
+.firstlayer, .secondlayer, .thirdlayer, .fourthlayer, .fifthlayer {
+  padding: 50px 0; /* Adjust the padding as necessary */
+  margin: 20px 0; /* Adjust the margin as necessary */
+}
+.firstlayer, .secondlayer, .thirdlayer, .fourthlayer, .fifthlayer {
+  min-height: 800px; /* Adjust the min-height as necessary */
+}
 
 .App {
   text-align: center;
@@ -18,8 +25,12 @@
 }
 
 .App-header {
-  background-color: #262627;
-
+  background-color: #212529;
+  position: fixed; /* Fixed position */
+  top: 0; /* Align to the top of the page */
+  left: 0; /* Align to the left of the page */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it stays above other content */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,15 +54,19 @@
 }
 
 body{
-  background: #FC5C7D;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+ /* background: #FC5C7D;  /* fallback for old browsers 
+  background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 
   background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  background: linear-gradient(rgb(19, 19, 19), rgb(22, 22, 22));
+
   
 }
 .imgpfp{
-  border-radius: 100px;
+  border-radius: 50%;
   height: 500px;
+  width: 500px;
+  object-fit: cover; /* This will ensure the image covers the area without distortion */
+
 }
 .intro {
   
@@ -77,9 +92,12 @@ body{
 .borders {
   border: none; /* Remove default border */
   height: 10px; /* Set the thickness of the HR */
+  
   background-color: #FFF; /* Set the color of the HR to bold white */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow for depth */
 }
+
+
 
 
 .firstlayer {
@@ -110,7 +128,6 @@ body{
   justify-content: space-around; /* Distributes space around the items */
   align-items: center; /* Aligns items vertically in the center */
   margin-top: auto;
-  padding-top: 100px;
 }
 .introinfo p{
   margin: 0; /* Remove default margin of h1 to tighten the spacing */
@@ -153,14 +170,14 @@ body{
 
 
 .card {
-  width: 320px;
-  background-color: #262627;
+  width: 220px;
+  background-color: #212529;
   color: black;
   position: relative;
   border-radius: 6.5em;
   padding: 2em;
   transition: transform 0.4s ease;
-  height: 820px;
+  height: 800px;
   overflow: hidden;
 }
 
@@ -207,7 +224,7 @@ body{
   display: flex;
   align-content: center;
   object-fit: contain;
-  background-color: #4f4f52;
+  background-color: #212529;
 
 }
 
@@ -243,73 +260,13 @@ body{
 
 }
 
-button {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  font-size: 27px;
-  padding: 1em 2.7em ;
-  font-weight: 700;
-  background: #333e3e;
-  color: white;
-  border: none;
-  position: relative;
-  overflow: hidden;
-  border-radius: 0.6em;
-  cursor: pointer;
 
-  height: 90px;
-}
-
-.gradient {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  border-radius: 0.6em;
-  margin-top: -0.25em;
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.3)
-  );
-}
-
-.label {
-  position: relative;
-  top: -1px;
-  font-size: 27px;
-
-}
-
-.transition {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-duration: 500ms;
-  background-color: rgba(185, 16, 98, 0.6);
-  border-radius: 9999px;
-  width: 0;
-  height: 0;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-button:hover .transition {
-  width: 14em;
-  height: 14em;
-}
-
-button:active {
-  transform: scale(0.97);
-}
 
 .thirdlayer{
  display: flex; /* Enables Flexbox for this container */
   justify-content: space-around; /* Distributes space around the items */
   align-items: center; /* Aligns items vertically in the center */
   margin-top: auto;
-  padding-top: 100px;
 
 }
 
@@ -318,7 +275,6 @@ button:active {
   justify-content: space-around; /* Distributes space around the items */
   align-items: center; /* Aligns items vertically in the center */
   margin-top: auto;
-  padding-top: 100px;
   flex-direction: row;
 
 
