@@ -19,6 +19,10 @@ import './titles.css';
 import './footer.css';
 import linkden from './linkden.png';
 import x from './X.jpg'
+import cv from './TristanHancock_CV.pdf';
+import './projects.css'
+import maxfocus from './logotrans.png'
+import store from './store2.png';
 function App() {
   return (
     <div className="App">
@@ -29,11 +33,11 @@ function App() {
       
       </header>
 
-<div className="firstlayer"> 
+<div id="about" className="firstlayer"> 
 <div className="intro">
   
 
-<h1>Hi,Im Tristan </h1>
+<h1>Hi,I'm Tristan </h1>
 <h1>A Software Engineer</h1> 
 
 </div>
@@ -48,20 +52,26 @@ function App() {
 <div className="introinfo">
   
 
-<p>I am a BTech student at NMIMS University’s Mukesh Patel School of Technology Management and Engineering, with a profound aspiration for a versatile career spanning various technical and non-technical roles. My journey has been shaped by a strong educational foundation and hands-on experience in the tech industry.</p>
+<p>Tristan Hancock is software Engineer graduating from NMIMS Mukesh Patel School. Tristan works with Web Development framworks such as React, ReactNative and nodeJS to name a few As well as working with python automation and machine learning.</p>
 <a href="https://www.nmims.edu/" target="_blank" rel="noopener noreferrer"> 
 <img src='./nmims.jpg'  className="nmims-logo"/> {/* Image added here */}
 </a>
+<a href={cv} download="Tristan_Hancock_CV.pdf" className="download-cv-button">
+  Download CV
+</a>
+
 </div>
 </div>
 <hr className="borders" />
 
 
 <button>
-  My Skills
+Skills
 </button>
 
-<div className="secondlayer">
+<div id="skills" className="secondlayer">
+
+
 
 
 
@@ -147,59 +157,54 @@ function App() {
   <span class="label">Projects</span>
 </button>
 
-<div className="thirdlayer">
 
+<div id="projects" className="thirdlayer">
 
 <a href='https://github.com/Tristan-Hancock/Max-Focus-AI' target="_blank" rel="noopener noreferrer" className='cardLink'>
-      <div className='cardContainer'>
-        <div className='cardContent'>
-          <img src={git} alt="Project Logo" className='cardLogo' />
-          <p className='cardTitle'>Max Focus AI</p>
-          <p className='cardDescription'>Max Focus AI is a Productive Coach I built using #reactjs #openai API .
-Max Focus AI allows you to prioritize tasks giving you a detailed schedule and timing for all that you have to get done . It uses the Open AI Assistant API to give you the most optimized solution to all your tasks that you have to complete.As well as add the tasks to a google callendar</p>
-<a href='https://www.linkedin.com/feed/update/urn:li:activity:7167042998306910210/' target="_blank" rel="noopener noreferrer" className='cardDescription'>Demo</a>
-        </div>
-      </div>
-    </a>
-    <a href='https://github.com/Tristan-Hancock/FetchAIDeepLearningHackathonFinals' target="_blank" rel="noopener noreferrer" className='cardLink'>
-      <div className='cardContainer'>
-        <div className='cardContent'>
-          <img src={git} alt="Project Logo" className='cardLogo' />
-          <p className='cardTitle'>Hackathon,AI Agent Food ordering system</p>
-          <p className='cardDescription'>Cyber Cypher Hackathon hosted by Taqneeq.A grocery store assistant for a customer to place orders by chatting with an AI assistant</p>
-          <a href='https://www.linkedin.com/feed/update/urn:li:activity:7161984638498791424/' target="_blank" rel="noopener noreferrer" className='cardDescription'>Demo</a>
 
-        </div>
-      </div>
+<div class="card2">
+<img src={maxfocus}  /> 
+  <div class="card__content">
+    <p class="card__title">Max Focus AI</p>
+    <p class="card__description">Max Focus AI is a Productive Coach.Max Focus AI allows you to prioritize tasks giving you a detailed schedule and timing for all that you have to get done . It uses the Open AI Assistant API to give you the most optimized solution to all your tasks that you have to complete.As well as add the tasks to a google callendar</p>
+  </div>
+</div>
+
     </a>
+
+
+
+    <a href='https://github.com/Tristan-Hancock/FetchAIDeepLearningHackathonFinals' target="_blank" rel="noopener noreferrer" className='cardLink'>
+     <div class="card2">
+     <img src={store}  /> 
+  <div class="card__content">
+    <p class="card__title">Hackathon,AI Agent Food ordering system</p>
+    <p class="card__description">Cyber Cypher Hackathon hosted by Taqneeq.A grocery store assistant for a customer to place orders by chatting with an AI assistant
+    </p>
+    <a href='https://www.linkedin.com/feed/update/urn:li:activity:7161984638498791424/' target="_blank" rel="noopener noreferrer" className='cardDescription'>Demo</a>
+  </div>
+</div>
+    </a>
+
     <a href='https://github.com/Tristan-Hancock/Handwriting-Detection-MachineLearning-image-processing' target="_blank" rel="noopener noreferrer" className='cardLink'>
-      <div className='cardContainer'>
-        <div className='cardContent'>
-          <img src={git} alt="Project Logo" className='cardLogo' />
-          <p className='cardTitle'>Handwriting Detection</p>
-          <p className='cardDescription'>This project explores the application of Machine Learning (ML) techniques for handwriting recognition, focusing on extracting patterns from large datasets to recognize handwritten characters. It examines various methodologies, including Convolutional Neural Networks (CNN) and zoning techniques, to achieve this goal. </p>
-          <a href='https://docs.google.com/document/d/15l32yms6_DM4oKca0_CdWvuxqRAH2XXrlf1lJQ28SWU/edit?usp=sharing' target="_blank" rel="noopener noreferrer" className='cardDescription'>Demo</a>
-
-        </div>
-      </div>
+      <div class="card2">
+      <img src={maxfocus}  /> 
+  <div class="card__content">
+    <p class="card__title">Currency Rate Explorer</p>
+    <p class="card__description">The project aims to deliver a sleek and user-friendly dashboard interface, leveraging the powerful React.js framework to provide real-time foreign exchange (Forex) rate information. By fetching data from the Forex Rate API</p>
+  </div>
+</div>
     </a>
     <a href='https://github.com/Tristan-Hancock/FetchAIDeepLearningHackathonFinals' target="_blank" rel="noopener noreferrer" className='cardLink'>
-      <div className='cardContainer'>
-        <div className='cardContent'>
-          <img src={git} alt="Project Logo" className='cardLogo' />
-          <p className='cardTitle'>FetchAI Hackathon Deep Learning</p>
-          <p className='cardDescription'>The project aims to deliver a sleek and user-friendly dashboard interface, leveraging the powerful React.js framework to provide real-time foreign exchange (Forex) rate information. By fetching data from the Forex Rate API</p>
-        </div>
-      </div>
-    </a>
-    <a href='https://github.com/Tristan-Hancock/Tristan-Portfolio' target="_blank" rel="noopener noreferrer" className='cardLink'>
-      <div className='cardContainer'>
-        <div className='cardContent'>
-          <img src={git} alt="Project Logo" className='cardLogo' />
-          <p className='cardTitle'>Currency Rate Explorer</p>
-          <p className='cardDescription'>The project aims to deliver a sleek and user-friendly dashboard interface, leveraging the powerful React.js framework to provide real-time foreign exchange (Forex) rate information. By fetching data from the Forex Rate API</p>
-        </div>
-      </div>
+    <div class="card2">
+    <img src={maxfocus}  /> 
+  <div class="card__content">
+    <p class="card__title">Handwriting Detection</p>
+    <p class="card__description">This project explores the application of Machine Learning (ML) techniques for handwriting recognition, focusing on extracting patterns from large datasets to recognize handwritten characters. It examines various methodologies, including Convolutional Neural Networks (CNN) and zoning techniques, to achieve this goal.</p>
+    <a href='https://docs.google.com/document/d/15l32yms6_DM4oKca0_CdWvuxqRAH2XXrlf1lJQ28SWU/edit?usp=sharing' target="_blank" rel="noopener noreferrer" className='cardDescription'>Demo</a>
+
+  </div>
+</div>
     </a>
     
 
@@ -214,7 +219,7 @@ Max Focus AI allows you to prioritize tasks giving you a detailed schedule and t
   <span class="label">Blogs</span>
 </button>
 
-<div className="fourthlayer">
+<div id="blogs" className="fourthlayer">
 
 
 
@@ -273,7 +278,7 @@ Max Focus AI allows you to prioritize tasks giving you a detailed schedule and t
 
 
 
-<footer>
+<footer id="connect">
   <div class="footer-container">
     <div class="footer-section">
       <h4>Get in touch</h4>

@@ -57,7 +57,9 @@ body{
  /* background: #FC5C7D;  /* fallback for old browsers 
   background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 
   background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(rgb(19, 19, 19), rgb(22, 22, 22));
+  /* background: linear-gradient(rgb(19, 19, 19), rgb(22, 22, 22)); */
+  background: linear-gradient(to right, rgb(122, 122, 122), rgb(241, 79, 53), rgb(244, 143, 42));
+
 
   
 }
@@ -145,6 +147,25 @@ body{
   margin-top: 35px;
 }
 
+.download-cv-button {
+  padding: 10px 20px;
+  background-color: #252525b3; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  margin-top: 10px;
+  display: inline-block;
+  cursor: pointer; /* Cursor changes to a hand icon when you hover over the button */
+}
+
+.download-cv-button:hover {
+  background-color: #121c12; /* Darker shade of green */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
 
 /* Footer */
 
