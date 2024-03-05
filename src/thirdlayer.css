@@ -1,4 +1,9 @@
+.thirdlayer{
+  background-image: url('./darkbg.png');
+  background-position: center;
+  background-size: cover;
 
+}
 .cardLink {
     text-decoration: none;
     color: inherit;

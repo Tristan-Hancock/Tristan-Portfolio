@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -23,8 +24,29 @@ import cv from './TristanHancock_CV.pdf';
 import './projects.css'
 import maxfocus from './logotrans.png'
 import store from './store2.png';
+import forex from './forex.webp';
+import hand from './hand.webp';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import './speech.css'
+import darkbg from './darkbg.png';
+import intro from './intro.png';
+
 function App() {
+const style= {
+  backgroundImage:{darkbg},
+  backgroundSize: 'cover',
+backgroundPosition: 'center',
+};
+
+    const { ref, inView } = useInView({
+      triggerOnce: true, // Trigger animation only once
+      threshold: 0.5, // Trigger when 50% of the element is in view
+    });
+  
+
   return (
+
     <div className="App">
       
       <header className="App-header">
@@ -34,6 +56,8 @@ function App() {
       </header>
 
 <div id="about" className="firstlayer"> 
+
+
 <div className="intro">
   
 
@@ -42,6 +66,8 @@ function App() {
 
 </div>
 
+{/*
+
 <div className="pfp">
 
 
@@ -49,12 +75,20 @@ function App() {
 </div>
 
 
+
+*/
+
+
+
+}
+
+
 <div className="introinfo">
   
 
 <p>Tristan Hancock is software Engineer graduating from NMIMS Mukesh Patel School. Tristan works with Web Development framworks such as React, ReactNative and nodeJS to name a few As well as working with python automation and machine learning.</p>
 <a href="https://www.nmims.edu/" target="_blank" rel="noopener noreferrer"> 
-<img src='./nmims.jpg'  className="nmims-logo"/> {/* Image added here */}
+<img src=''  className="nmims-logo"/> {/* Image added here */}
 </a>
 <a href={cv} download="Tristan_Hancock_CV.pdf" className="download-cv-button">
   Download CV
@@ -147,6 +181,7 @@ Skills
 </div>
 
 
+
 </div>
 
 <hr className="borders" />
@@ -156,9 +191,14 @@ Skills
   <span class="gradient"></span>
   <span class="label">Projects</span>
 </button>
+<motion.div
+      ref={ref}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: inView ? 1 : 0 }}
+      transition={{ duration: 0.1 }}
+    >
 
-
-<div id="projects" className="thirdlayer">
+<div id="projects" className="thirdlayer" style={style}>
 
 <a href='https://github.com/Tristan-Hancock/Max-Focus-AI' target="_blank" rel="noopener noreferrer" className='cardLink'>
 
@@ -188,7 +228,7 @@ Skills
 
     <a href='https://github.com/Tristan-Hancock/Handwriting-Detection-MachineLearning-image-processing' target="_blank" rel="noopener noreferrer" className='cardLink'>
       <div class="card2">
-      <img src={maxfocus}  /> 
+      <img src={forex}  /> 
   <div class="card__content">
     <p class="card__title">Currency Rate Explorer</p>
     <p class="card__description">The project aims to deliver a sleek and user-friendly dashboard interface, leveraging the powerful React.js framework to provide real-time foreign exchange (Forex) rate information. By fetching data from the Forex Rate API</p>
@@ -197,10 +237,10 @@ Skills
     </a>
     <a href='https://github.com/Tristan-Hancock/FetchAIDeepLearningHackathonFinals' target="_blank" rel="noopener noreferrer" className='cardLink'>
     <div class="card2">
-    <img src={maxfocus}  /> 
+    <img src={hand}  /> 
   <div class="card__content">
     <p class="card__title">Handwriting Detection</p>
-    <p class="card__description">This project explores the application of Machine Learning (ML) techniques for handwriting recognition, focusing on extracting patterns from large datasets to recognize handwritten characters. It examines various methodologies, including Convolutional Neural Networks (CNN) and zoning techniques, to achieve this goal.</p>
+    <p class="card__description">This project explores the application of Machine Learning techniques for handwriting recognition, focusing on extracting patterns from large datasets to recognize handwritten characters. It examines various methodologies, including Convolutional Neural Networks (CNN) and zoning techniques, to achieve this goal.</p>
     <a href='https://docs.google.com/document/d/15l32yms6_DM4oKca0_CdWvuxqRAH2XXrlf1lJQ28SWU/edit?usp=sharing' target="_blank" rel="noopener noreferrer" className='cardDescription'>Demo</a>
 
   </div>
@@ -212,6 +252,11 @@ Skills
 </div>
 
 
+    </motion.div>
+
+
+
+
 <hr className="borders" />
 <button>
   <span class="transition"></span>
@@ -219,7 +264,7 @@ Skills
   <span class="label">Blogs</span>
 </button>
 
-<div id="blogs" className="fourthlayer">
+<div id="blogs" className="fourthlayer" >
 
 
 
@@ -327,15 +372,7 @@ Skills
   </div>
 </footer>
 
-
-
-
-
-
-
-
     </div>
-  );
-}
-
+);
+};
 export default App;

@@ -1,10 +1,27 @@
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-on-scroll {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+
 .firstlayer, .secondlayer, .thirdlayer, .fourthlayer, .fifthlayer {
   padding: 50px 0; /* Adjust the padding as necessary */
   margin: 20px 0; /* Adjust the margin as necessary */
 }
 .firstlayer, .secondlayer, .thirdlayer, .fourthlayer, .fifthlayer {
-  min-height: 800px; /* Adjust the min-height as necessary */
+  min-height: 100vh; /* Adjust the min-height as necessary */
+  margin-top: 100px;
 }
 
 .App {
@@ -25,18 +42,11 @@
 }
 
 .App-header {
-  background-color: #212529;
-  position: fixed; /* Fixed position */
-  top: 0; /* Align to the top of the page */
-  left: 0; /* Align to the left of the page */
-  width: 100%; /* Full width */
-  z-index: 1000; /* Ensure it stays above other content */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+position: fixed;
+top: 0;
+background-color: #121c12;
+width: 100%;
+z-index: 1100;
   
 }
 
@@ -54,11 +64,7 @@
 }
 
 body{
- /* background: #FC5C7D;  /* fallback for old browsers 
-  background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 
-  background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* background: linear-gradient(rgb(19, 19, 19), rgb(22, 22, 22)); */
-  background: linear-gradient(to right, rgb(122, 122, 122), rgb(241, 79, 53), rgb(244, 143, 42));
+
 
 
   
@@ -71,18 +77,21 @@ body{
 
 }
 .intro {
-  
-  display: flex; /* Use flexbox layout */
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center children vertically in the container */
-  align-items: center; /* Center children horizontally in the container */
-  height: 50vh; /* Optional: Make the div take up the full viewport height */
-  text-align: center; /* Center the text inside the h1 elements */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  text-align: center;
   width: 50vh;
   border-radius: 20px;
-  background-color: rgba(222, 213, 213, 0.411); /* White with 50% opacity */
-  
+  background-color: rgba(222, 213, 213, 0);
+  position: absolute; /* Added or adjusted position */
+  left: 0px; /* Adjusted to position from the left */
+  top: 200px; /* Position from the top if needed */
+  padding-right: 50px;
 }
+
 
 .intro h1 {
   margin: 0; /* Remove default margin of h1 to tighten the spacing */
@@ -92,11 +101,8 @@ body{
   padding: 0.3rem; /* Optional: Add some padding around the h1 elements */
 }
 .borders {
-  border: none; /* Remove default border */
-  height: 10px; /* Set the thickness of the HR */
-  
-  background-color: #FFF; /* Set the color of the HR to bold white */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow for depth */
+ 
+
 }
 
 
@@ -106,21 +112,26 @@ body{
   display: flex; /* Enables Flexbox for this container */
   justify-content: space-around; /* Distributes space around the items */
   align-items: center; /* Aligns items vertically in the center */
-  margin-top: 150px;
+  background-image: url('./intro2.webp');
+  background-position: center;
+  background-size: cover;
+
 }
 
-.introinfo{
-  display: flex; /* Use flexbox layout */
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center children vertically in the container */
-  align-items: center; /* Center children horizontally in the container */
-  height: 50vh; /* Optional: Make the div take up the full viewport height */
-  text-align: center; /* Center the text inside the h1 elements */
+.introinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  text-align: center;
   width: 50vh;
   border-radius: 20px;
-  background-color: rgba(222, 213, 213, 0.411); /* White with 50% opacity */
-  overflow: hidden; /* This will hide the overflow content */
-
+  background-color: rgba(222, 213, 213, 0);
+  overflow: hidden;
+  position: absolute; /* Added or adjusted position */
+  right: 15px; /* Adjusted to position from the right */
+  top: 200px; /* Position from the top if needed */
 }
 
 
@@ -129,7 +140,7 @@ body{
   display: flex; /* Enables Flexbox for this container */
   justify-content: space-around; /* Distributes space around the items */
   align-items: center; /* Aligns items vertically in the center */
-  margin-top: auto;
+  margin-top: -200px;
 }
 .introinfo p{
   margin: 0; /* Remove default margin of h1 to tighten the spacing */
@@ -163,32 +174,12 @@ body{
 }
 
 .download-cv-button:hover {
-  background-color: #121c12; /* Darker shade of green */
+  background-color: #efefef; /* Darker shade of green */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  color: #121c12;
 }
 
 /* Footer */
-
-.custom-shape-divider-top-1709205615 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1709205615 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 263px;
-}
-
-.custom-shape-divider-top-1709205615 .shape-fill {
-  fill: #FFFFFF;
-}
-
 
 .card {
   width: 220px;
@@ -287,7 +278,7 @@ body{
  display: flex; /* Enables Flexbox for this container */
   justify-content: space-around; /* Distributes space around the items */
   align-items: center; /* Aligns items vertically in the center */
-  margin-top: auto;
+  margin-top: -200px;
 
 }
 
@@ -295,7 +286,7 @@ body{
   display: flex; /* Enables Flexbox for this container */
   justify-content: space-around; /* Distributes space around the items */
   align-items: center; /* Aligns items vertically in the center */
-  margin-top: auto;
+  margin-top: -200px;
   flex-direction: row;
 
 
