@@ -140,7 +140,9 @@ body{
   display: flex; /* Enables Flexbox for this container */
   justify-content: space-around; /* Distributes space around the items */
   align-items: center; /* Aligns items vertically in the center */
-  margin-top: -200px;
+  margin-top: -100px;
+  background: linear-gradient(145deg, #0f0c29, #232223, #24243e);
+
 }
 .introinfo p{
   margin: 0; /* Remove default margin of h1 to tighten the spacing */

@@ -4,10 +4,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import React from 'react';
 import TopBar from './TopBar';
-import htmlImage from './HTML.png';
-import nodelogo from './node.png';
-import javascript from './javascript.png';
-import python from './python.png';
 import './tailwind.css';
 import './thirdlayer.css';
 import git from './github.png';
@@ -31,6 +27,7 @@ import { useInView } from 'react-intersection-observer';
 import './speech.css'
 import darkbg from './darkbg.png';
 import intro from './intro.png';
+import SkillsGrid from './SkillsGrid';
 
 function App() {
 const style= {
@@ -105,7 +102,10 @@ Skills
 
 <div id="skills" className="secondlayer">
 
+<SkillsGrid />
 
+
+{/*
 
 
 
@@ -181,6 +181,29 @@ Skills
 </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/}
 
 </div>
 
