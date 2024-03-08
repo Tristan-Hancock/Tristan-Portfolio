@@ -1,5 +1,3 @@
-import { useEffect, useRef, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import React from 'react';
@@ -7,27 +5,20 @@ import TopBar from './TopBar';
 import './tailwind.css';
 import './thirdlayer.css';
 import git from './github.png';
-import tris from './TristanPfp.jpeg';
-import openai from './openai.jpg';
 import './4thlayer.css';
-import vision from './vision.jpg'
-import meta from './meta.webp';
 import './titles.css';
 import './footer.css';
 import linkden from './linkden.png';
 import x from './X.jpg'
 import cv from './TristanHancock_CV.pdf';
 import './projects.css'
-import maxfocus from './logotrans.png'
-import store from './store2.png';
-import forex from './forex.webp';
-import hand from './hand.webp';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './speech.css'
 import darkbg from './darkbg.png';
-import intro from './intro.png';
 import SkillsGrid from './SkillsGrid';
+import ProjectGrid from './ProjectGrid';
+import BlogGrid from './BlogGrid.js';
 
 function App() {
 const style= {
@@ -40,7 +31,16 @@ backgroundPosition: 'center',
       triggerOnce: true, // Trigger animation only once
       threshold: 0.5, // Trigger when 50% of the element is in view
     });
-  
+
+
+    const slideInVariants = {
+      hidden: { opacity: 0, x: -50 }, // Less extreme start position
+      visible: { 
+        opacity: 1,
+        x: 0,
+        transition: { type: 'spring', stiffness: 120, duration: 0.5 }
+      }
+    };
 
   return (
 
@@ -48,41 +48,17 @@ backgroundPosition: 'center',
       
       <header className="App-header">
      <TopBar />
-   
-      
       </header>
 
 <div id="about" className="firstlayer"> 
 
-
 <div className="intro">
-  
-
 <h1>Hi,I'm Tristan </h1>
 <h1>A Software Engineer</h1> 
-
 </div>
-
-{/*
-
-<div className="pfp">
-
-
-  <img src={tris} className="imgpfp"></img>
-</div>
-
-
-
-*/
-
-
-
-}
 
 
 <div className="introinfo">
-  
-
 <p>Tristan Hancock is software Engineer graduating from NMIMS Mukesh Patel School. Tristan works with Web Development framworks such as React, ReactNative and nodeJS to name a few As well as working with python automation and machine learning.</p>
 <a href="https://www.nmims.edu/" target="_blank" rel="noopener noreferrer"> 
 <img src=''  className="nmims-logo"/> {/* Image added here */}
@@ -90,258 +66,40 @@ backgroundPosition: 'center',
 <a href={cv} download="Tristan_Hancock_CV.pdf" className="download-cv-button">
   Download CV
 </a>
-
 </div>
 </div>
-<hr className="borders" />
 
 
-<button>
-Skills
-</button>
+<button>Skills</button>
 
 <div id="skills" className="secondlayer">
-
+  
 <SkillsGrid />
-
-
-{/*
-
-
-
-
-<div class="card">
-  <div class="card-content">
-    <div class="card-top">
-      <span class="card-title">    </span>
-    </div>
-    <div class="card-bottom">
-      
-    </div>
-  </div>
-  <div class="card-image"> 
-  <img src={logo} className="htmllogo"/> 
-
-  </div>
-
 </div>
 
-
-<div class="card">
-  <div class="card-content">
-    <div class="card-top">
-      <span class="card-title">   </span>
-    </div>
-    <div class="card-bottom">
-    </div>
-  </div>
-  <div class="card-image">
-  <img src={javascript} className="htmllogo" alt="HTML Logo" />
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-content">
-    <div class="card-top">
-      <span class="card-title">   </span>
-    </div>
-    <div class="card-bottom">
-    </div>
-  </div>
-  <div class="card-image">
-  <img src={nodelogo} className="htmllogo" alt="HTML Logo" />
-  </div>
-</div>
-
-
-<div class="card">
-  <div class="card-content">
-    <div class="card-top">
-      <span class="card-title">   </span>
-    </div>
-    <div class="card-bottom">
-    </div>
-  </div>
-  <div class="card-image">
-  <img src={htmlImage} className="htmllogo" alt="HTML Logo" />
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-content">
-    <div class="card-top">
-      <span class="card-title">   </span>
-    </div>
-    <div class="card-bottom">
-    </div>
-  </div>
-  <div class="card-image">
-  <img src={python} className="htmllogo" alt="HTML Logo" />
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/}
-
-</div>
-
-<hr className="borders" />
-
-<button>
-  <span class="transition"></span>
-  <span class="gradient"></span>
-  <span class="label">Projects</span>
-</button>
-<motion.div
-      ref={ref}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: inView ? 1 : 0 }}
-      transition={{ duration: 0.1 }}
-    >
 
 <div id="projects" className="thirdlayer" style={style}>
+<motion.div
+    ref={ref} // attach the ref from useInView to trigger animations on viewport entry
+    initial="hidden" // initial state
+    animate={inView ? "visible" : "hidden"} // animate to visible if inView is true
+    exit="exit" // optional: define exit animation
+    variants={slideInVariants} // use the variants object
+  >
+<button>Projects</button>
 
-<a href='https://github.com/Tristan-Hancock/Max-Focus-AI' target="_blank" rel="noopener noreferrer" className='cardLink'>
-
-<div class="card2">
-<img src={maxfocus}  /> 
-  <div class="card__content">
-    <p class="card__title">Max Focus AI</p>
-    <p class="card__description">Max Focus AI is a Productive Coach.Max Focus AI allows you to prioritize tasks giving you a detailed schedule and timing for all that you have to get done . It uses the Open AI Assistant API to give you the most optimized solution to all your tasks that you have to complete.As well as add the tasks to a google callendar</p>
-  </div>
-</div>
-
-    </a>
-
-
-
-    <a href='https://github.com/Tristan-Hancock/FetchAIDeepLearningHackathonFinals' target="_blank" rel="noopener noreferrer" className='cardLink'>
-     <div class="card2">
-     <img src={store}  /> 
-  <div class="card__content">
-    <p class="card__title">Hackathon,AI Agent Food ordering system</p>
-    <p class="card__description">Cyber Cypher Hackathon hosted by Taqneeq.A grocery store assistant for a customer to place orders by chatting with an AI assistant
-    </p>
-    <a href='https://www.linkedin.com/feed/update/urn:li:activity:7161984638498791424/' target="_blank" rel="noopener noreferrer" className='cardDescription'>Demo</a>
-  </div>
-</div>
-    </a>
-
-    <a href='https://github.com/Tristan-Hancock/Handwriting-Detection-MachineLearning-image-processing' target="_blank" rel="noopener noreferrer" className='cardLink'>
-      <div class="card2">
-      <img src={forex}  /> 
-  <div class="card__content">
-    <p class="card__title">Currency Rate Explorer</p>
-    <p class="card__description">The project aims to deliver a sleek and user-friendly dashboard interface, leveraging the powerful React.js framework to provide real-time foreign exchange (Forex) rate information. By fetching data from the Forex Rate API</p>
-  </div>
-</div>
-    </a>
-    <a href='https://github.com/Tristan-Hancock/FetchAIDeepLearningHackathonFinals' target="_blank" rel="noopener noreferrer" className='cardLink'>
-    <div class="card2">
-    <img src={hand}  /> 
-  <div class="card__content">
-    <p class="card__title">Handwriting Detection</p>
-    <p class="card__description">This project explores the application of Machine Learning techniques for handwriting recognition, focusing on extracting patterns from large datasets to recognize handwritten characters. It examines various methodologies, including Convolutional Neural Networks (CNN) and zoning techniques, to achieve this goal.</p>
-    <a href='https://docs.google.com/document/d/15l32yms6_DM4oKca0_CdWvuxqRAH2XXrlf1lJQ28SWU/edit?usp=sharing' target="_blank" rel="noopener noreferrer" className='cardDescription'>Demo</a>
-
-  </div>
-</div>
-    </a>
-    
-
+  <ProjectGrid />
+  </motion.div>
 
 </div>
 
-
-    </motion.div>
-
-
-
-
-<hr className="borders" />
-<button>
-  <span class="transition"></span>
-  <span class="gradient"></span>
-  <span class="label">Blogs</span>
-</button>
+<button>Blogs</button>
 
 <div id="blogs" className="fourthlayer" >
 
-
-
-<div class="container">
-
-  <div class="card">
-    <a href="https://medium.com/@tristanhancock_99866/gpt-4-api-powering-ai-innovations-and-transformation-586022a707fe">
-    <div class="card__header">
-      <img src={openai} alt="card__image" class="card__image" width="600"/>
-    </div>
-    <div class="card__body">
-      <h4>GPT-4 API: Powering AI Innovations and Transformation</h4>
-    </div>
-    </a>
-  </div>
-
-
-  <div class="card">
-    <a href="https://medium.com/@tristanhancock_99866/apple-vision-pro-unleashing-the-future-of-wearable-technology-dd5bd4208e78">
-    <div class="card__header">
-      <img src={vision} alt="card__image" class="card__image" width="600" />
-    </div>
-    <div class="card__body">
-      <h4>Apple Vision Pro: Unleashing the Future of Wearable Technology</h4>
-    </div>
-    </a>
-  </div>
-
-
-  <div class="card">
-    <a href="https://medium.com/@tristanhancock_99866/meta-announces-the-meta-quest-3-heres-what-we-know-224850948de2">
-    <div class="card__header">
-      <img src={meta} alt="card__image" class="card__image" width="600"/>
-    </div>
-    <div class="card__body">
-      <h4>Meta Announces the Meta Quest 3: Here’s What We Know </h4>
-    </div>
-    </a>
-  </div>
-
-
-  
-</div>
-
+< BlogGrid/>
 
 </div>
-
-
-<hr className="borders" />
-
-
-
-
-
 
 
 
