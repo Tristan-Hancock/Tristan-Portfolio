@@ -46,10 +46,9 @@ function BlogGrid() {
       <h4>Meta Announces the Meta Quest 3: Here’s What We Know </h4>
     </div>
     </a>
+    
   </div>
 
-
-  
 </div>
 
    
