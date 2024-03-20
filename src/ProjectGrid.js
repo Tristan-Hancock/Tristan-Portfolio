@@ -25,14 +25,14 @@ function ProjectCard({ title, imgSrc, technologies, details , imgClassName , lin
 
         <div className="card-buttons">
           <button 
-            className="card-button primary" onClick={toggleDetails}
+            className="card-button-primary" onClick={toggleDetails}
            
           >
             Details
           </button>
           <hr />
           <a href={links}> 
-          <button className="card-button secondary">Links</button>
+          <button className="card-button-secondary">Links</button>
           </a>
         </div>
         

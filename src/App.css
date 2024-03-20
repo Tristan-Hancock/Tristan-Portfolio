@@ -15,30 +15,19 @@
 }
 
 
-.firstlayer, .secondlayer, .thirdlayer, .fourthlayer, .fifthlayer {
+.secondlayer, .thirdlayer, .fourthlayer, .fifthlayer {
   padding: 50px 0; /* Adjust the padding as necessary */
   margin: 20px 0; /* Adjust the margin as necessary */
 }
-.firstlayer, .secondlayer, .thirdlayer, .fourthlayer, .fifthlayer {
+.secondlayer, .thirdlayer, .fourthlayer, .fifthlayer {
   min-height: 100vh; /* Adjust the min-height as necessary */
   margin-top: 100px;
 }
 
-.App {
-  text-align: center;
- 
-
-}
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -47,92 +36,11 @@ top: 0;
 background-color: #121c12;
 width: 100%;
 z-index: 1100;
-  
 }
 
 .App-link {
   color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-.imgpfp{
-  border-radius: 50%;
-  height: 500px;
-  width: 500px;
-  object-fit: cover; /* This will ensure the image covers the area without distortion */
-
-}
-.intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
-  text-align: center;
-  width: 50vh;
-  border-radius: 20px;
-  background-color: rgba(222, 213, 213, 0);
-  position: absolute; /* Added or adjusted position */
-  left: 0px; /* Adjusted to position from the left */
-  top: 200px; /* Position from the top if needed */
-  padding-right: 50px;
-  flex: 1;
-  min-width: 250px;
-}
-@media (max-width: 768px) {
-  .firstlayer {
-    flex-direction: column; /* Stack the children vertically on smaller screens */
-  }
-
-  .intro, .introinfo {
-    text-align: center; /* Optional: center-align the text for smaller screens */
-  }
-}
-.intro h1 {
-  margin: 0; /* Remove default margin of h1 to tighten the spacing */
-  color: azure;
-  font-size: 70px;
-  /* Instagram's brand color, adjust as needed */
-  padding: 0.3rem; /* Optional: Add some padding around the h1 elements */
-}
-
-
-.firstlayer {
-  display: flex; /* Enables Flexbox for this container */
-  justify-content: space-around; /* Distributes space around the items */
-  align-items: center; /* Aligns items vertically in the center */
-  background-image: url('./intro2.webp');
-  background-position: center;
-  background-size: cover;
-
-}
-
-.introinfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
-  text-align: center;
-  width: 50vh;
-  border-radius: 20px;
-  background-color: rgba(222, 213, 213, 0);
-  overflow: hidden;
-  position: absolute; /* Added or adjusted position */
-  right: 15px; /* Adjusted to position from the right */
-  top: 200px; /* Position from the top if needed */
-}
-
-
 
 .secondlayer {
   display: flex; /* Enables Flexbox for this container */
@@ -142,44 +50,7 @@ z-index: 1100;
   background: linear-gradient(145deg, #2e2585, #232223, #29296b);
 
 }
-.introinfo p{
-  margin: 0; /* Remove default margin of h1 to tighten the spacing */
-  color: azure;
-  font-size: 20px;
-  white-space: normal; /* Ensures text wraps and doesn't overflow */
-  overflow-wrap: break-word; /* Break words that are too long to fit */
-  text-align: justify; /* Optional: This will justify your text */
 
-}
-
-
-.nmims-logo{
-  border-radius: 20px;
-  margin-top: 35px;
-}
-
-.download-cv-button {
-  padding: 10px 20px;
-  background-color: #252525b3; /* Green */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  margin-top: 10px;
-  display: inline-block;
-  cursor: pointer; /* Cursor changes to a hand icon when you hover over the button */
-}
-
-.download-cv-button:hover {
-  background-color: #efefef; /* Darker shade of green */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  color: #121c12;
-}
-
-/* Footer */
 
 
 .htmllogo{
@@ -194,7 +65,6 @@ z-index: 1100;
   display: flex;
   align-content: center;
   object-fit: contain;
-
 }
 
 

@@ -1,0 +1,95 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.firstlayer {
+    display: flex;
+    flex-direction: row; /* Keep a row layout for larger screens */
+    justify-content: space-between; /* Space around intro and introinfo */
+    align-items: center;
+    padding: 5% 10%; /* Responsive padding on the sides */
+    background-image: url('./intro2.webp');
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    position: relative; /* Relative positioning */
+}
+
+.intro, .introinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align text to the left */
+    max-width: 30%; /* Adjust max width */
+    margin: 0 2%; /* Provide some margin to avoid touching the edge */
+    border-radius: 20px;
+    background-color: rgba(213, 188, 188, 0); /* Slightly transparent background */
+    padding: 20px;
+    color: #efefef; /* Light text color for contrast */
+}
+.intro{
+    margin-left: -20px;
+}
+.introinfo{
+    margin-right: -55px;
+}
+.intro h1 {
+    font-size: 50px; /* Large font size for headings */
+    margin: 0;
+}
+
+.introinfo p {
+    font-size: 20px; /* Adjust paragraph font size for readability */
+    margin: 0;
+}
+
+/* Adjustments for smaller screens (<1024px) */
+@media (max-width: 1024px) {
+    .intro, .introinfo {
+        max-width: 50%; /* Increase max width for medium-sized screens */
+        margin: 0 1%; /* Adjust margins */
+    }
+}
+
+/* Adjustments for mobile screens (<768px) */
+@media (max-width: 768px) {
+    .firstlayer {
+        flex-direction: column; /* Stack vertically on small screens */
+        align-items: center; /* Align items to the start */
+        padding: 20px; /* Add padding */
+    }
+
+    .intro, .introinfo {
+        max-width: 100%; /* Allow sections to take full width */
+        align-items: center; /* Center-align items */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+    }
+
+    .intro h1, .introinfo p {
+        font-size:  1.5rem; /* Adjust font size for mobile readability */
+        text-align: center; /* Center-align text */
+    }
+}
+
+.download-cv-button {
+    padding: 10px 20px;
+    background-color: #252525b3;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.download-cv-button:hover {
+    background-color: #efefef;
+    color: #121c12;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
