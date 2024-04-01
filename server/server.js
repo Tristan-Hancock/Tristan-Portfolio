@@ -50,6 +50,7 @@ app.post('/api/chat', async (req, res) => {
 
     const messages = await openai.beta.threads.messages.list(thread.id);
     console.log("threadID after messages: " + thread.id);
+    const response = []; 
 
     // Handling messages with a check for the structure
     messages.body.data.forEach(message => {
@@ -57,15 +58,19 @@ app.post('/api/chat', async (req, res) => {
         message.content.forEach(part => {
           if (part.type === 'text' && part.text) {
             console.log(part.text.value);
+            response.push(part.text.value); //stores response need to send this to front end 
+            console.log("Response variable content:", response); //storing as an array
           }
         });
       }
     });
+// Respond with the processed responses
+   res.json({ responses: response });
 
     // Respond with the processed messages
-    res.json(messages.body.data.filter(message => message.role === 'assistant').map(message => {
-      return message.content.map(part => part.text ? part.text.value : 'Message structure unexpected').join('');
-    }));
+    // res.json(messages.body.data.filter(message => message.role === 'assistant').map(message => {
+    //   return message.content.map(part => part.text ? part.text.value : 'Message structure unexpected').join('');
+    // }));
   } catch (error) {
     console.error('OpenAI API request failed:', error);
     res.status(500).json({ error: 'Internal server error' });

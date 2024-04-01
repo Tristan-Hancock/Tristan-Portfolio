@@ -4,7 +4,7 @@
     justify-content: center;
     width: 80px; /* Size of the circle */
     height: 80px; /* Size of the circle */
-    background-color: rgb(204, 197, 197); /* Background color of the circle */
+    background-color: rgb(252, 252, 252); /* Background color of the circle */
     border-radius: 50%;
     margin-right: 8px; /* Adjust the space between icon and text */
   }
@@ -14,171 +14,121 @@
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-    /* Style your button as you like */
     font-size: 60px;
   }
   
-  .chat-box {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 300px;
-    height: 600px;
-    z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.009);
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* You can add transition effects in here */
-  .chat-box .chat-text {
-    font-size: 0.5em !important; /* Smaller text */
-    color: white; /* Color of the text */
-  }
-
-
-
-
-  /*CHAT WINDOW CSS */
-  .chat-box {
-    position: fixed;
-    bottom: 90px; /* Adjust to not overlap the button */
-    right: 20px;
-    min-width: 300px;
-    max-width: 350px;
-    background-color: #fffffffe;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
-    z-index: 2000;
-  }
-  
-  /* Chat box internal styles */
-
-  
-  .chat-title {
-    background-color: #6f7183; /* Header background color */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-  }
-  
-  .chat-title h1 {
-    margin: 0;
-    font-size: 1.2rem;
-  }
-  
-  .avatar {
-    position: absolute;
-    top: 10px;
-    right: 60px;
-  }
-  
-  .avatar img {
-    width: 40px; /* Adjust avatar size */
-    height: 40px;
-    border-radius: 50%;
-  }
-  
-  .messages {
-    flex-grow: 1;
-    padding: 10px;
-    overflow-y: auto;
-  }
-  
-  .messages-content {
-    /* Add styles for messages here */
-  }
-  
-  .message-box {
-    display: flex;
-    padding: 10px;
-   margin-top: 490px;
-   height: 60px;
-   margin-left: -10px;
-  }
-  
-  .message-input {
-    flex-grow: 1;
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  .message-submit {
-    background-color: #fdfdfd; /* Button background color */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 550px;
-
-  }
-  
-  .chat-box button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: inherit;
-  }
-  
-  /* Adding animations for opening and closing chat box */
-  .chat-box.open {
-    animation: slideIn 0.3s forwards;
-  }
-  
-  .chat-box.close {
-    animation: slideOut 0.3s forwards;
-  }
-  
-  @keyframes slideIn {
-    from {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slideOut {
-    from {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    to {
-      transform: translateY(100%);
-      opacity: 0;
-    }
+ /* Chat Box Styles */
+/* Chat Box Styles */
+.chat-box {
+  width: 350px; /* Set according to your design preference */
+  height: 500px; /* Set according to your design preference */
+  display: flex;
+  bottom: 20px; 
+  right: 20px;
+  flex-direction: column;
+  background: #000; /* Dark background */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Ensure it floats above other content */
+  font-family: 'Arial', sans-serif; /* Choose your font */
+  position: fixed; /* To position close button and header */
 }
 
-  
+.chat-header {
+  background: #373737; /* Dark header background */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.chat-title {
+  font-size: 18px;
+}
 
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.chat-body {
+  flex-grow: 1;
+  overflow-y: auto;
+  background: #1E1E1E; /* Dark body background */
+  padding: 10px;
+}
+
+.messages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between messages */
+  background-color: rgba(240, 248, 255, 0.087);
+  border-radius: 25px;
+}
+
+.message {
+  padding: 10px 20px;
+  border-radius: 18px;
+  color: white; /* Text color */
+  line-height: 1.5; /* Adjust line height for better readability */
+  max-width: 80%; /* Message max width */
+}
+
+.message.user {
+  background: #4A4B57; /* User message background */
+  align-self: flex-end;
+}
+
+.message.assistant {
+  background: #5C5C5C; /* Assistant message background */
+  align-self: flex-start;
+}
+
+.message-box {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #373737; /* Match header background */
+  border-top: 1px solid #4A4B57; /* Add top border for separation */
+}
+
+.message-input {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 10px;
+  background: #000; /* Input background */
+  color: white; /* Input text color */
+  border: 1px solid #4A4B57; /* Add some border */
+  border-radius: 15px; /* Rounded corners for input */
+  outline: none; /* Remove outline */
+}
+
+.message-submit {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .send-icon {
-    width: 17px;
-   overflow-wrap: normal;
-  }
-  .send {
-    width: 30px;
-    height: 30px;
-    background-color: none;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    justify-content: flex-end;
-    border-radius: 20px;
-  }
-  .close-button{
-    background-color: aqua;
-    font-size: 50px;
-    z-index: 20;
-  }
+  width: 24px; /* Icon size */
+  height: 24px; /* Icon size */
+  fill: #6B6C7B;
+}
+
+/* Hide scrollbar for a cleaner look */
+.chat-body::-webkit-scrollbar {
+  display: none;
+}
+
+.chat-body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
