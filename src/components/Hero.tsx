@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
             />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mt-6 text-gray-900">Tristan Hancock</h2>
-          <p className="mt-2 text-gray-500 max-w-xs">I am a Web Designer based in san francisco.</p>
+          <p className="mt-2 text-gray-500 max-w-xs">Software Engineer</p>
           <div className="flex space-x-2 md:space-x-3 mt-6">
             {SOCIAL_LINKS.map(link => <SocialIcon key={link.name} name={link.name} href={link.href} />)}
           </div>

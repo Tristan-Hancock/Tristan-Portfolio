@@ -26,18 +26,18 @@ const Header: React.FC = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
-          <a href="#home" className={`text-3xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}>Tristan Hancock</a>
+          <a href="#home" className={`text-3xl font-bold ${isScrolled ? 'text-gray-900' : 'text-gray-900'}`}>Tristan Hancock</a>
 
           <nav className="hidden lg:flex items-center space-x-8">
             {NAV_LINKS.map(link => (
-              <a key={link.name} href={link.href} className={`${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-[#3B82F6] transition-colors duration-300 font-medium`}>
+              <a key={link.name} href={link.href} className={`${isScrolled ? 'text-gray-700' : 'text-gray-700'} hover:text-[#3B82F6] transition-colors duration-300 font-medium`}>
                 {link.name}
               </a>
             ))}
           </nav>
           
           <a href="#contact" className="hidden lg:inline-block bg-[#3B82F6] text-white px-6 py-2 rounded-full font-semibold hover:bg-opacity-80 transition-all duration-300">
-              Hire Me
+              Connect
           </a>
 
           <div className="lg:hidden">
@@ -57,7 +57,7 @@ const Header: React.FC = () => {
             </a>
           ))}
           <a href="#contact" onClick={() => setIsMenuOpen(false)} className="bg-[#3B82F6] text-white px-6 py-2 rounded-full font-semibold hover:bg-opacity-80 transition-all duration-300">
-              Hire Me
+              Connect
           </a>
         </nav>
       </div>
