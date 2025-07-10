@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO and Metadata -->
+    <title>Tristan Hancock - Personal Portfolio</title>
+    <meta name="description" content="Personal portfolio of Tristan Hancock, a founder and developer specializing in web development, mobile apps, and AI/ML solutions. Founder of Ovelia Health, AceLink Software Solutions, and VidExact." />
+    <meta name="keywords" content="Tristan Hancock, portfolio, web developer, mobile developer, AI, ML, SEO, Ovelia Health, AceLink Software Solutions, VidExact, founder, software engineer" />
+    <meta name="author" content="Tristan Hancock" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain.com/" />
+    <meta property="og:title" content="Tristan Hancock - Personal Portfolio" />
+    <meta property="og:description" content="Founder and developer specializing in web, mobile, and AI solutions." />
+    <meta property="og:image" content="https://i.imgur.com/oe2S4mD.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://your-domain.com/" />
+    <meta property="twitter:title" content="Tristan Hancock - Personal Portfolio" />
+    <meta property="twitter:description" content="Founder and developer specializing in web, mobile, and AI solutions." />
+    <meta property="twitter:image" content="https://i.imgur.com/oe2S4mD.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #F0F3F6;
+        color: #4A5568; /* Default text color */
+      }
+      .text-outline {
+        -webkit-text-stroke: 2px #1a202c;
+        color: transparent;
+      }
+      @keyframes marquee {
+        from { transform: translateX(0%); }
+        to { transform: translateX(-50%); }
+      }
+      .marquee-content {
+        animation: marquee 30s linear infinite;
+      }
+       @keyframes spin-slow {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .animate-spin-slow {
+        animation: spin-slow 10s linear infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/src/index.tsx"></script>
+</body>
+</html>
