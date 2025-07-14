@@ -44,21 +44,40 @@ const Portfolio: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredItems.map((item) => (
-            <div key={item.src} className="group relative overflow-hidden rounded-lg shadow-md">
-              <img src={item.src} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
-                <div className="text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
-                  <div aria-label={`View project: ${item.title}`} className="w-16 h-16 bg-[#3B82F6] rounded-full flex items-center justify-center mx-auto mb-4 text-4xl">
-                     <PlusIcon />
-                  </div>
-                  <h3 className="text-xl font-bold">{item.title}</h3>
-                  <p className="text-sm">{item.category}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+  {filteredItems.map((item) => (
+    <div
+      key={item.src}
+      className="group relative overflow-hidden rounded-lg shadow-md"
+    >
+      <img
+        src={item.src}
+        alt={item.title}
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        loading="lazy"
+      />
+
+      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+        <div className="text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
+          
+          {/* ← Changed `div` → `a` here: */}
+          <a
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`View project: ${item.title}`}
+            className="w-16 h-16 bg-[#3B82F6] rounded-full flex items-center justify-center mx-auto mb-4 text-4xl cursor-pointer"
+          >
+            <PlusIcon />
+          </a>
+
+          <h3 className="text-xl font-bold">{item.title}</h3>
+          <p className="text-sm">{item.category}</p>
         </div>
+      </div>
+    </div>
+  ))}
+</div>
+
       </div>
     </section>
   );
