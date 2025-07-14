@@ -48,14 +48,14 @@ const Hero: React.FC = () => {
           <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
             <p className="text-lg text-gray-500">Hello There!</p>
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-black leading-tight mt-4 text-gray-800">
-              <span className="text-black">I'M</span> <span className="text-outline">TRISTAN HANCOCK,</span> <span className="text-black">A PRODUCT DESIGNER CRAFTING</span> <span className="text-outline">USER-CENTRIC DESIGN WITH</span> <span className="text-black">PIXEL-PERFECT PRECISION.</span>
+              <span className="text-black">I'M</span> <span className="text-outline">TRISTAN HANCOCK,</span> <span className="text-black">Building AI-Driven Agents,Apps & Sites</span> <span className="text-outline">Let’s turn your idea into a high-impact products</span> 
             </h1>
             <div className="flex items-center gap-3 mt-6">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3B82F6] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-[#3B82F6]"></span>
               </span>
-              <p className="text-gray-600">Available for Freelancing</p>
+              <p className="text-gray-600">Your vision, my expertise—let’s connect.</p>
             </div>
             <a href="#" download className="mt-8 inline-flex items-center gap-2 bg-[#3B82F6] text-white font-semibold px-8 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-300 shadow-md hover:shadow-lg">
               Download CV
