@@ -5,7 +5,7 @@ export const useTypingEffect = (words: string[], typeSpeed = 150, deleteSpeed = 
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [wordIndex, setWordIndex] = useState(0);
-  const [typingSpeed, setTypingSpeed] = useState(typeSpeed);
+  // const [typingSpeed, setTypingSpeed] = useState(typeSpeed);
 
   useEffect(() => {
     const handleTyping = () => {
