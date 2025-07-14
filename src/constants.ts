@@ -1,3 +1,11 @@
+import logo from './assets/logo-dark.png';
+import ovelialogo from './assets/logo.svg';
+import sva from './assets/sva.png';
+import ovelia from './assets/ovelia.png';
+import maya from './assets/maya.png';
+import script from './assets/script.png';
+import videxact from './assets/videxact.png';
+import anshled from './assets/anshled.png';
 export const NAV_LINKS = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
@@ -24,8 +32,8 @@ export const PERSONAL_INFO = {
 export const VENTURES = [
     { 
       name: 'Ovelia Health', 
-      description: 'Innovative healthcare technology solutions.',
-      logo: '' ,
+      description: 'Innovative healthcare technology for PCOS',
+      logo: ovelialogo ,
       href: 'https://ovelia.health/'
     },
     { 
@@ -36,8 +44,8 @@ export const VENTURES = [
     },
     { 
       name: 'VidExact', 
-      description: 'AI-powered video analytics platform.',
-      logo: 'https://i.imgur.com/v8L4T6T.png',
+      description: 'MultiModel video search engine.',
+      logo: logo,
       href: 'https://www.videxact.com/'
     },
 ];
@@ -74,13 +82,13 @@ export const SERVICES = [
 
 export type PortfolioCategory = 'All' | 'Web Development' | 'Mobile Apps' | 'AI/ML';
 
-export const PORTFOLIO_ITEMS: { src: string; title: string; category: PortfolioCategory }[] = [
-  { src: 'https://picsum.photos/seed/project1/600/400', title: 'E-commerce Platform', category: 'Web Development' },
-  { src: 'https://picsum.photos/seed/project2/600/400', title: 'Fitness Tracker App', category: 'Mobile Apps' },
-  { src: 'https://picsum.photos/seed/project3/600/400', title: 'AI Chatbot Integration', category: 'AI/ML' },
-  { src: 'https://picsum.photos/seed/project4/600/400', title: 'Corporate Website Redesign', category: 'Web Development' },
-  { src: 'https://picsum.photos/seed/project5/600/400', title: 'Social Media App', category: 'Mobile Apps' },
-  { src: 'https://picsum.photos/seed/project6/600/400', title: 'Data Analytics Dashboard', category: 'Web Development' },
+export const PORTFOLIO_ITEMS: { src: string; title: string; category: PortfolioCategory;  href: string }[] = [
+  { src: script, title: 'Script: Clothing Brand', category: 'Web Development' , href: 'https://www.shopscript.in/' },
+  { src: maya, title: 'AI Assistant Integration', category: 'AI/ML' , href: 'https://maya-3x4bp6b4n-tristan-hancocks-projects.vercel.app/' },
+  { src: anshled, title: 'AnshLed Marketing Website', category: 'Web Development',href: 'https://www.anshled.com/' },
+  { src: sva, title: 'SVA: Mental Health App', category: 'Mobile Apps' , href: 'https://docs.google.com/presentation/d/1F_0REUmPrcR7aiz0uATN900ate_NONTc_hHt7HNgz74/edit?usp=sharing' },
+  { src: ovelia, title: 'Ovelia:PCOS App', category: 'Mobile Apps' , href: 'https://docs.google.com/presentation/d/1F_0REUmPrcR7aiz0uATN900ate_NONTc_hHt7HNgz74/edit?usp=sharing' },
+  { src: videxact, title: 'MultiModel Video Analysis', category: 'Web Development', href: 'https://www.videxact.com/' },
 ];
 
 export const BLOG_POSTS = [

@@ -14,7 +14,7 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <img 
-              src="https://picsum.photos/seed/about/600/700"
+              src="https://www.videxact.com/assets/img/th-1/tristan.jpeg"
               alt="A portrait of Tristan Hancock in a professional setting"
               className="rounded-lg shadow-xl w-full"
               loading="lazy"
@@ -23,7 +23,7 @@ const About: React.FC = () => {
           <div>
             <h3 className="text-3xl font-semibold text-gray-900 mb-4">Hi There! I'm Tristan Hancock</h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              As a founder of multiple tech ventures and a hands-on developer, I build noteworthy UX/UI designs, websites, and AI-powered applications that comply with the latest industry trends. I specialize in converting a vision into meaningful and useful products. Having a sharp eye for product evolution helps me prioritize tasks, iterate fast, and deliver faster.
+            I’m a Computer Science graduate and serial entrepreneur who’s founded three technology ventures. With deep expertise in AI, I architect and develop mobile apps, websites, and conversational AI agents that deliver seamless user experiences. From ideation through launch, I translate complex visions into polished, industry-leading products—prioritizing the right features, iterating rapidly, and shipping on schedule.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mb-8">
               <div><strong className="text-gray-800">Name:</strong> <span className="text-gray-600">{PERSONAL_INFO.name}</span></div>
